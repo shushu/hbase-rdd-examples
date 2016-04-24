@@ -17,15 +17,17 @@ scalacOptions ++= Seq(
 )
 
 resolvers ++= Seq(
-  "Cloudera repos" at "https://repository.cloudera.com/artifactory/cloudera-repos",
-  "Cloudera releases" at "https://repository.cloudera.com/artifactory/libs-release"
+  "Hadoop Releases" at "https://repository.cloudera.com/artifactory/cloudera-repos/",
+  "Artima Maven Repository" at "http://repo.artima.com/releases",
+  "apester" at "https://github.com/Qmerce/events-model.git#master",
+  "shushu" at "https://github.com/shushu/hbase-rdd.git#master"
 )
 
 libraryDependencies ++= Seq(
-  "org.apache.spark" %% "spark-core" % "1.5.0" % "provided",
-  "org.apache.spark" %% "spark-streaming" % "1.5.0" % "provided",
-  "org.apache.hbase" % "hbase-common" % "1.0.0-cdh5.5.1" % "provided",
-  "org.apache.hbase" % "hbase-client" % "1.0.0-cdh5.5.1" % "provided",
-  "org.apache.hbase" % "hbase-server" % "1.0.0-cdh5.5.1" % "provided",
+  "org.apache.spark" %% "spark-core" % "1.6.0",
+  "org.apache.spark" %% "spark-streaming" % "1.6.0" ,
+  "org.apache.hbase" % "hbase-client" % "1.1.2" ,
+  "org.apache.hbase" % "hbase-server" % "1.1.2",
+  "org.apache.hbase" % "hbase-common" % "1.1.2" ,
   "eu.unicredit" %% "hbase-rdd" % "0.7.1"
 )
